@@ -35,7 +35,7 @@ Bundle 'kien/ctrlp.vim'
 Bundle 'fatih/vim-go'
 Plugin 'cesardeazevedo/Fx-ColorScheme'
 "Bundle 'Shougo/neocomplete.vim'
-"Bundle 'fatih/molokai'
+Bundle 'fatih/molokai'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -58,13 +58,18 @@ let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 "let g:ycm_filetype_blacklist = { 'go': 1 }
 
-let g:acp_enableAtStartup = 0
+"let g:acp_enableAtStartup = 0
 " Use neocomplete.
-let g:neocomplete#enable_at_startup = 1
+"let g:neocomplete#enable_at_startup = 1
 " " Use smartcase.
-let g:neocomplete#enable_smart_case = 1
+"let g:neocomplete#enable_smart_case = 1
 "let g:molokai_original = 1
 
 syntax on
 
 set number
+
+if $TERM == "xterm-256color"
+	set t_Co=256
+	colorscheme molokai
+endif
