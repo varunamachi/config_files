@@ -121,3 +121,7 @@ export PATH=$PATH:$GOROOT/bin:$GOBIN
 export PATH=$PATH:~/Bin
 
 export TERM="xterm-256color"
+
+l1() {
+	ls -1 $1
+}
